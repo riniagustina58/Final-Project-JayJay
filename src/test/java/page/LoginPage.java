@@ -7,7 +7,7 @@ import stepdef.ui.BaseTest;
 
 import java.time.Duration;
 
-public class LoginPage {
+public class LoginPage extends Website{
 
     WebDriver driver;
     WebDriverWait wait;
@@ -25,7 +25,7 @@ public class LoginPage {
     }
 
     public void goToHomepage() {
-        driver.get("https://www.demoblaze.com/");
+        driver.get(url);
     }
 
     public void clickLoginMenu() {

@@ -42,9 +42,7 @@ public class LoginStepDefWeb extends BaseTest {
 
     @And("user click login button")
     public void userClickLoginButton() {
-
         loginPage.clickLoginButton();
-
     }
 
     @Then("user is on homepage {string}")
