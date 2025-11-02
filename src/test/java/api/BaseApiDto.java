@@ -1,5 +1,7 @@
 package api;
 
+import java.util.List;
+
 public class BaseApiDto {
 
 
@@ -8,7 +10,7 @@ public class BaseApiDto {
     private int totalData;
     private String error;
     private String errorMessage;
-
+    private List<Object> listTag;
 
     private UserDto UserDto;
 
@@ -58,5 +60,13 @@ public class BaseApiDto {
 
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
+    }
+
+    public List<Object> getListTag() {
+        return listTag;
+    }
+
+    public void setListTag(List<Object> listTag) {
+        this.listTag = listTag;
     }
 }
