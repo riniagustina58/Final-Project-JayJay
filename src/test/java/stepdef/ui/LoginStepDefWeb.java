@@ -1,6 +1,5 @@
 package stepdef.ui;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,7 +7,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import page.LoginPage;
 
-public class LoginStepDef extends BaseTest {
+public class LoginStepDefWeb extends BaseTest {
 
     LoginPage loginPage;
 

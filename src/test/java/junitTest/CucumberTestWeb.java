@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
         glue = {"stepdef/ui","hooks"},
         features = {"src/test/resources/features/ui"},
         plugin = {"pretty", "html:reports/cucumber.html", "json:reports/cucumber.json"},
-        tags = "@ui"
+        tags = "@web"
 )
-public class CucumberTest {}
+public class CucumberTestWeb {}

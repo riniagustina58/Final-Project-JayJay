@@ -34,9 +34,21 @@ task cucumber(type: Test) {
     dependsOn assemble
     useJUnit()
     include '**/CucumberTest.class'
-    systemProperty "cucumber.filter.tags", "@ui"
+    systemProperty "cucumber.filter.tags", "@web"
     systemProperty "cucumber.glue", "stepdef/ui"
     systemProperty "cucumber.features", "src/test/resources/features/ui"
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+task cucumberApi(type: Test) {
+    dependsOn assemble
+    useJUnit()
+    include '**/CucumberTestApi.class'
+    systemProperty "cucumber.filter.tags", "@api"
+    systemProperty "cucumber.glue", "stepdef/api"
+    systemProperty "cucumber.features", "src/test/resources/features/api"
     testLogging {
         events "passed", "skipped", "failed"
     }

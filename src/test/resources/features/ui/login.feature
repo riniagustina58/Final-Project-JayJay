@@ -1,7 +1,7 @@
 @login
 Feature: Login
 
-  @ui @valid-login
+  @web @valid-login
   Scenario: Login with valid username and password
     Given user open homepage
     When user click login menu
@@ -12,7 +12,7 @@ Feature: Login
     Then user is on homepage "tia231"
 
 
-  @ui @invalid-login-wrong-password
+  @web @invalid-login-wrong-password
   Scenario: Login with valid username and password
     Given user open homepage
     When user click login menu
@@ -22,7 +22,7 @@ Feature: Login
     And user click login button
     Then show alert wrong password "Wrong password."
 
-  @ui @invalid-login-user-does-not-exist
+  @web @invalid-login-user-does-not-exist
   Scenario: Login with valid username and password
     Given user open homepage
     When user click login menu
