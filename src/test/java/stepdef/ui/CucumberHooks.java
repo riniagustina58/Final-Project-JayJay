@@ -4,12 +4,12 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class CucumberHooks extends BaseTest {
-    @Before("@ui")
+    @Before("@web")
     public void beforeTest() {
         getDriver();
     }
 
-    @After("@ui")
+    @After("@web")
     public void AfterTest() {
         driver.close();
     }

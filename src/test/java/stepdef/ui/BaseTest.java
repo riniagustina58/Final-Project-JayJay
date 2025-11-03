@@ -41,6 +41,6 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
-        //driver = WebDriverManager.chromedriver().create();
+//        driver = WebDriverManager.chromedriver().create();
     }
 }

@@ -7,7 +7,7 @@ import stepdef.ui.BaseTest;
 
 import java.time.Duration;
 
-public class LoginPage extends Website{
+public class LoginPage extends Website {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -37,24 +37,24 @@ public class LoginPage extends Website{
         return dialog.getText();
     }
 
-    public void inputUsername (String username) {
+    public void inputUsername(String username) {
         driver.findElement(usernameInputText).sendKeys(username);
     }
 
-    public void inputPassword (String pass) {
+    public void inputPassword(String pass) {
         driver.findElement(passwordInputText).sendKeys(pass);
     }
 
-    public void clickLoginButton (){
+    public void clickLoginButton() {
         driver.findElement(loginButton).click();
     }
 
-    public String homePageLogin (){
+    public String homePageLogin() {
         WebElement welcomeText = wait.until(ExpectedConditions.visibilityOfElementLocated(homePageLogin));
         return welcomeText.getText();
     }
 
-    public String alertWrongPassword(){
+    public String alertWrongPassword() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.alertIsPresent());
@@ -69,7 +69,7 @@ public class LoginPage extends Website{
         }
     }
 
-    public String alertUserDoesNotExist(){
+    public String alertUserDoesNotExist() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.alertIsPresent());

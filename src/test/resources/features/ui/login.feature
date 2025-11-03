@@ -31,3 +31,4 @@ Feature: Login
     And user input password pada text box with "51515151"
     And user click login button
     Then show alert user does not exist "User does not exist."
+

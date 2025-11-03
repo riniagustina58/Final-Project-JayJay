@@ -33,7 +33,7 @@ test {
 task cucumber(type: Test) {
     dependsOn assemble
     useJUnit()
-    include '**/CucumberTest.class'
+    include '**/CucumberTestWeb.class'
     systemProperty "cucumber.filter.tags", "@web"
     systemProperty "cucumber.glue", "stepdef/ui"
     systemProperty "cucumber.features", "src/test/resources/features/ui"
