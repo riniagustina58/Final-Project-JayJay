@@ -18,6 +18,7 @@ public class LoginPage extends Website {
     By passwordInputText = By.id("loginpassword");
     By loginButton = By.xpath("//button[text()='Log in']");
     By homePageLogin = By.id("nameofuser");
+    By logoutButton = By.id("logout2");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -82,6 +83,15 @@ public class LoginPage extends Website {
         } catch (NoAlertPresentException e) {
             return null;
         }
-
     }
+
+    public void clickLogoutButton () {
+        driver.findElement(logoutButton).click();
+    }
+
+    public String logoutUser () {
+        return driver.findElement(loginMenuButton).getText();
+    }
+
+
 }

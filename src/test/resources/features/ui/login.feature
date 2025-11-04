@@ -32,3 +32,17 @@ Feature: Login
     And user click login button
     Then show alert user does not exist "User does not exist."
 
+  @web @logout
+  Scenario: Login with valid username and password and logout
+    Given user open homepage
+    When user click login menu
+    And user is on login dialog
+    And  user input username text box with "tia231"
+    And user input password pada text box with "123456"
+    And user click login button
+    And user is on homepage "tia231"
+    When user click Logout button
+    Then user is back on homepage "Log in"
+
+
+

@@ -75,4 +75,20 @@ public class ChartStepDefWeb extends BaseTest {
         String text = chartPage.userOnOrderDialog();
         Assert.assertEquals(title, text);
     }
+
+    @And("User input Place order information {string} {string} {string} {string} {string} {string}")
+    public void userInputPlaceOrderInformation(String name, String country, String city, String creditCard, String month, String year) {
+        chartPage.inputPlaceOrder(name, country, city, creditCard, month, year);
+    }
+
+    @And("User click Purchase button")
+    public void userClickPurchaseButton() {
+        chartPage.clickPurchaseButton();
+    }
+
+    @Then("checkout completed succes and show alert {string}")
+    public void checkoutCompletedSuccesAndShowAlert(String message) {
+        String text = chartPage.onCompletedPage();
+        Assert.assertEquals(message, text);
+    }
 }

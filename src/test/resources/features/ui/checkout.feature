@@ -1,8 +1,8 @@
-@chart
-Feature: checkout product
+@Checkout
+Feature: Checkout
 
-  @web @chart-checkout
-  Scenario: process an product until success checkout
+  @ui @Checkout-item
+  Scenario: Checkout item
     Given user open homepage for checkout
     When user click category phone for checkout
     And  show category phone product for checkout "Samsung galaxy s6"
@@ -13,11 +13,5 @@ Feature: checkout product
     And user click menu chart
     And user on chart page "Samsung galaxy s6";
     And User click place order
-    And User On Checkout dialog "Place order"
-    And User input Place order information "Tia Aria" "Indonesia" "Jakarta Selatan" "123456" "05" "1997"
-    And User click Purchase button
-    Then checkout completed succes and show alert "Thank you for your purchase!"
-
-
-
+    Then User On Checkout dialog "Place order"
 

@@ -1,14 +1,12 @@
 package stepdef.ui;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import io.cucumber.java.PendingException;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import page.CategoryPage;
-import page.LoginPage;
 
 public class CategoryStepDefWeb extends BaseTest {
 

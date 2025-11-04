@@ -1,5 +1,6 @@
 package stepdef.ui;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -49,7 +50,7 @@ public class LoginStepDefWeb extends BaseTest {
     public void userIsOnHomepage(String username) {
         String text = loginPage.homePageLogin();
 
-        String expected = "Welcome "+ username;
+        String expected = "Welcome " + username;
         Assert.assertEquals(expected, text);
 
     }
@@ -64,5 +65,16 @@ public class LoginStepDefWeb extends BaseTest {
     public void showAlertUserDoesNotExist(String alert1) {
         String alertText = loginPage.alertUserDoesNotExist();
         Assert.assertEquals(alertText, alert1);
+    }
+
+    @When("user click Logout button")
+    public void userClickLogoutButton() {
+        loginPage.clickLogoutButton();
+    }
+
+    @Then("user is back on homepage {string}")
+    public void userIsBackOnHomepage(String logintext) {
+        String text= loginPage.logoutUser();
+        Assert.assertEquals(logintext, text);
     }
 }
